@@ -1,0 +1,48 @@
+@import "compass/reset";
+@import "breakpoint";
+@import "compass";
+@import "settings";
+@import "general";
+@import "typography";
+@import "icons";
+@include border-box-sizing;
+
+main {
+    @include span (24 of 24 last);
+    display: table;
+    height: 100%;
+    @include breakpoint(900px){
+        @include span(15 of 24);
+    }
+}
+h1 {
+    text-align: center;
+}
+nav {
+@include inline-block-list;
+    text-align: center;
+}
+article {
+    margin: 2rem 1rem;
+    display: table-cell;
+    margin: 0;
+    padding: 0 10%;
+}
+aside {
+    @include breakpoint(900px){
+        @include span(9 of 24 last);
+        background: url("../images/neligan-eoghan.png") no-repeat center rgba(92, 178, 160, 0.2);
+        position: relative;
+        height: 100%;
+    }
+/*    @include breakpoint(900px){
+        @include span(9 of 24 last);
+        background: url("../images/neligan-eoghan.png") no-repeat center rgba(92, 178, 160, 0.2);
+        position: relative;
+        height: 100%;
+    }*/
+}
+ul {
+    list-style-type: none;
+    padding: 6% 0 0 0;
+}
